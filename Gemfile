@@ -30,6 +30,8 @@ gem "jbuilder"
 #manually addding gem for jquery to Gemfile
 gem 'jquery-rails'
 
+gem 'friendly_id', '~> 5.4.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
