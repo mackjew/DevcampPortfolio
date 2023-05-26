@@ -16,12 +16,13 @@ class PortfoliosController < ApplicationController
         @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
 
         respond_to do |format|
-          if @portfolio_item.save
-            format.html { redirect_to @portfolios_path, notice: "portfolio_item was successfully created." }
-            format.json { render :show, status: :created, location: @portfolio_item }
-          else
-            format.html { render :new, status: :unprocessable_entity }
-            format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
+            logger.info(@portfolios_path)
+            if @portfolio_item.save
+                format.html { redirect_to portfolios_path, notice: "portfolio_item was successfully created." }
+                format.json { render :show, status: :created, location: @portfolio_item }
+            else
+                format.html { render :new, status: :unprocessable_entity }
+                format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
           end
         end
     end
