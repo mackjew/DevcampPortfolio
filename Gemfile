@@ -30,7 +30,11 @@ gem "jbuilder"
 #manually addding gem for jquery to Gemfile
 gem 'jquery-rails'
 
+#manually entered for Udemy course. allows for creation of human readable routes.
 gem 'friendly_id', '~> 5.4.0'
+#manually entered for Udemy course. Library for implmenting authentication procedures/logins for my site.
+gem 'devise', '~> 4.9', '>= 4.9.2'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
