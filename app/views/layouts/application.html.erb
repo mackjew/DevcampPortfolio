@@ -22,5 +22,11 @@
       <%= link_to('Login', new_user_session_path, data: { turbo_method: :get }) %>
     <% end %>
     <%= yield %>
+
+    <p>
+    <% if session[:source] %>
+      Thanks for visiting me from <%= session[:source] %>
+    <% end %>
+    </p>
   </body>
 </html>
