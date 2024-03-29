@@ -10,3 +10,6 @@ Rails.application.config.assets.version = "1.0"
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.application.config.assets.precompile += %w( application.css ) # it seems that this works even without this line
+Rails.application.config.assets.precompile += %w( blogs.css ) # it seems that this works even without this line
+Rails.application.config.assets.precompile += %w( portfolios.css ) # it seems that this works even without this line
