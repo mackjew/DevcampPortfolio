@@ -32,6 +32,7 @@ class PortfoliosController < ApplicationController
 
     def edit
         @portfolio_item = Portfolio.find(params[:id])
+        3.times { @portfolio_item.technologies.build }
     end
 
     def update
@@ -50,6 +51,7 @@ class PortfoliosController < ApplicationController
 
     def show
         @portfolio_item = Portfolio.find(params[:id]) 
+        3.times { @portfolio_item.technologies.build }
     end
 
     def destroy
@@ -68,7 +70,7 @@ class PortfoliosController < ApplicationController
         params.require(:portfolio).permit(:title, 
                                         :subtitle, 
                                         :body, 
-                                        technologies_attribute: [:name]
+                                        technologies_attributes: [:name]
                                     )
     end
 end

@@ -16,7 +16,7 @@
     <p class="notice"> <%= notice %></p>
     <p class="alert"> <%= alert %> </p>
 
-    <%= render("shared/nav") %>
+    <%= render("shared/nav", location: 'top') %>
 
     <% if current_user.is_a?(User) %>
       <!-- This code is functional with rails 7 and is based on Turbo. Apparently Turbo is meant to help build effective/modern web app frontends with out writing a ton of JS or messing with SPAs. More info on Turbo here: https://turbo.hotwired.dev/handbook/introduction -->
