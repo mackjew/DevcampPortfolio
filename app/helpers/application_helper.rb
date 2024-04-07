@@ -1,6 +1,6 @@
 module ApplicationHelper
     def sample_helper
-        "<p> My Helper </p>".html_safe()
+        content_tag(:div, "My Content", class: "my_class")
     end
 
     def login_helper
