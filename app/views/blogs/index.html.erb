@@ -10,29 +10,18 @@
   </thead>
 
   <tbody>
-    <% @blogs.each do |blog| %>
-    <!-- <%= render blog %> -->
-      <tr>
-        <td><%= blog.title%></td>
-        <td><%= blog.body%></td>
-        <td><%= link_to(blog.status, toggle_status_blog_path(blog)) %></td>
-        <td><%= link_to('Show', blog) %></td>
-        <td><%= link_to('Edit', edit_blog_path(blog) ) %></td>
-        <td><%= link_to('Delete Post', blog, method: :delete, data: {confirm: 'Are you sure'})%></td>
-      </tr>
-      <tr><td colspan="20">---------------------------------------------------------------------------------------------</td></tr>
-    <% end %>
+    <%= render(@blogs) %>
   </tbody>
 </table>
 
 <!-- <div id="blogs">
-  <% @blogs.each do |blog| %>
-    <%= render blog %>
+  <%# <% @blogs.each do |blog| %> %>
+    <%# <%= render blog %> %>
     <p>
-      <%= link_to "Show this blog", blog %>
+      <%# <%= link_to "Show this blog", blog %> %>
     </p>
     <div>--------------------------------</div>
-  <% end %>
+  <%# <% end %> %>
 </div> -->
 
 <br>
