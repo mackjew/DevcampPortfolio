@@ -21,6 +21,12 @@
     <%= form.text_area :body %>
   </div>
 
+  <%# added this section because I was getting an error on creation of a new blog. Seems like there is a gap in the way the videos go through the tasks. But creation of a blog requires assigning that blog to a topic record. %>
+  <div>
+    <%= form.label( :topic ) %>
+    <%= form.select(:topic_id, options_from_collection_for_select(Topic.all, 'id', 'title', @blog.topic_id), {}, class: "form-control" ) %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
