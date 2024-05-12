@@ -13,4 +13,14 @@ module ApplicationHelper
             (link_to('Login', new_user_session_path, data: { turbo_method: :get }) )
         end
     end
+
+    def copyright_generator
+        MjViewTool::Renderer.copyright('MacKenzie Jew', 'All rights reserved')
+    end
+
+    # before_action :set_copyright
+
+    # def set_copyright
+    #    @copyright = 
+    # end
 end

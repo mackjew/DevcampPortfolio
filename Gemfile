@@ -80,3 +80,4 @@ group :development do
   # gem "spring"
 end
 
+gem 'mj_view_tool', git: 'https://github.com/mackjew/mj_view_tool'
