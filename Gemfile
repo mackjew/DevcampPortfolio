@@ -80,4 +80,7 @@ group :development do
   # gem "spring"
 end
 
+gem 'petergate', '~> 3.0'
+
+# my own gem built from Udemy course. right now it is still coming from GitHub as for some reason RubyGems.com refuses to send me a confirmation email.
 gem 'mj_view_tool', git: 'https://github.com/mackjew/mj_view_tool'
