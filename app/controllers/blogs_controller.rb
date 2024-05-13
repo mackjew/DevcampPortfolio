@@ -1,6 +1,8 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy toggle_status]
   layout("blog")
+  # the (all) param is listing permissions for any User that that accesses a blog. The (user) param is signed in user but is just a regular user. They have an (except) object that lists all functions that they should not have access to. The (site_admin) param lists what actions they have access to, which is all of them.
+  access( all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all)
 
   # GET /blogs or /blogs.json
   def index
