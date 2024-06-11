@@ -1,11 +1,15 @@
+<article class="blog-post">
+  <h2 class="display-5 link-body-emphasis mb-1"><%= link_to(blog.title().upcase(), blog) %></h2>
+  <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago on <%= blog.created_at().strftime("%Y/%m/%d %H:%M:%S") %> </p>
 
-<tr>
-  <td><%= blog.title() %></td>
-  <td>Published <%= distance_of_time_in_words(blog.created_at, Time.now)%> ago</td>
-  <td width="1000"><%= blog.body() %></td>
-  <td><%= link_to(blog.status, toggle_status_blog_path(blog)) %></td>
-  <td><%= link_to('Show', blog) %></td>
-  <td><%= link_to('Edit', edit_blog_path(blog) ) if logged_in?(:site_admin) %></td>
-  <td><%= link_to('Delete Post', blog, method: :delete, data: {confirm: 'Are you sure'}) if logged_in?(:site_admin)%></td>
-</tr>
-<tr><td colspan="20">---------------------------------------------------------------------------------------------</td></tr>
+  <% if(logged_in?(:site_admin)) %>
+    <p class="blog-post-meta">
+      <%= link_to(blog.status, toggle_status_blog_path(blog)) if logged_in?(:site_admin) %> /
+      <%= link_to('Edit', edit_blog_path(blog) ) if logged_in?(:site_admin) %> /
+      <%= link_to('Delete Post', blog, method: :delete, data: {confirm: 'Are you sure'}) if logged_in?(:site_admin)%>
+    </p>
+  <% end %>
+  
+  <p><%= blog.body() %></p>
+
+</article>
