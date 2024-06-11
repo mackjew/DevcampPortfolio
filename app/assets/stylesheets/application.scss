@@ -67,7 +67,19 @@ body {
     color: black;
 }
 
+.register_text a
+{
+    text-align: right;
+}
+
 .top a
 {
     color: brown;
+}
+
+.login > .card
+{
+    width: 22rem;
+    margin: 0 auto;
+    float: auto;
 }
