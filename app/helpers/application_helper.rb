@@ -3,7 +3,7 @@ module ApplicationHelper
         content_tag(:div, "My Content", class: "my_class")
     end
 
-    def login_helper(style)
+    def login_helper(style = '')
         if current_user.is_a?(GuestUser)
             # <!-- This code is functional with rails 7 and is based on Turbo. Apparently Turbo is meant to help build effective/modern web app frontends with out writing a ton of JS or messing with SPAs. More info on Turbo here: https://turbo.hotwired.dev/handbook/introduction -->
             "<div>".html_safe() + (link_to('Register', new_user_registration_path, data: { turbo_method: :get }, class: style) ) + "</div>".html_safe() +
