@@ -36,14 +36,16 @@
       </div>
       <%# end of blog HEADER %>
 
+      <%#  %>
+      <div class="row g-5">
+        <%# Start of main blog list %>
+        <%= yield %>
+        <%# End of main blog list %>
 
-      <%# Start of main blog list %>
-      <%= yield %>
-      <%# End of main blog list %>
-
-      <%#  Start of sidebar %>
-
-      <%#  End of sidebar %>
+        <%#  Start of sidebar %>
+        <%= render('shared/blog_sidebar') %>
+        <%#  End of sidebar %>
+      </div>
 
       <%= source_helper("blog") %>
 
