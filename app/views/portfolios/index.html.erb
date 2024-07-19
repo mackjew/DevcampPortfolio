@@ -6,13 +6,6 @@
       <%# original link for creating portfolio records. does not belong in the main body of index anymore %>
       <%# <%= link_to("Create New Item", new_portfolio_path) if logged_in?(:site_admin)%> 
 
-<!--
-      <p>
-        This is the code for the link above.
-        <%= "new_portfolio_path" + " : " + new_portfolio_path + " , " +  "new_portfolio_url" + " : " + new_portfolio_url %>
-      </p>
-    -->
-
       <%= render(partial: 'portfolio_item', collection: @portfolio_items )%>
     </div>
   </div>
