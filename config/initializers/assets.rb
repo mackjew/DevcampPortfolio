@@ -13,3 +13,7 @@ Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.precompile += %w( application.css ) # it seems that this works even without this line
 Rails.application.config.assets.precompile += %w( blogs.css ) # it seems that this works even without this line
 Rails.application.config.assets.precompile += %w( portfolios.css ) # it seems that this works even without this line
+
+# config/initializers/assets.rb
+Rails.application.config.assets.precompile += %w(bootstrap.js popper.js)
+
