@@ -87,3 +87,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'mj_view_tool', git: 'https://github.com/mackjew/mj_view_tool'
 
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
+
+gem 'html5sortable-rails', '~> 0.9.3.1'
+
+gem 'jquery-ui-rails', '~> 7.0'
