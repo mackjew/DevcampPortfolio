@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
     access( all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all)
 
     def index
-        @portfolio_items = Portfolio.all
+        @portfolio_items = Portfolio.by_position
         #Portfolio.all
     end
 
@@ -48,6 +48,11 @@ class PortfoliosController < ApplicationController
         end
     end
 
+    def update_position
+        @portfolio_item = Portfolio.find(params[:id])
+        @portfolio_item.insert_at(portfolio_params[:position].to_i)
+    end
+
     def show
         # 3.times { @portfolio_item.technologies.build }
     end
@@ -65,6 +70,7 @@ class PortfoliosController < ApplicationController
         params.require(:portfolio).permit(:title, 
                                         :subtitle, 
                                         :body, 
+                                        :position,
                                         technologies_attributes: [:name]
                                     )
     end
@@ -73,4 +79,5 @@ class PortfoliosController < ApplicationController
         # performs the lookup
         @portfolio_item = Portfolio.find(params[:id]) 
     end
+
 end
