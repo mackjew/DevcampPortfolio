@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
+  patch 'portfolio/:id/update_position', to: 'portfolios#update_position', as: 'update_position'
+
   resources :blogs do
     member do
       get :toggle_status

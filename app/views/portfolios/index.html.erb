@@ -2,7 +2,10 @@
 
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+    data-controller="sortable"
+    data-sortable-resource-name-value="portfolio"
+    >
       <%# original link for creating portfolio records. does not belong in the main body of index anymore %>
       <%# <%= link_to("Create New Item", new_portfolio_path) if logged_in?(:site_admin)%> 
 

@@ -91,3 +91,6 @@ gem 'kaminari', '~> 1.2', '>= 1.2.2'
 gem 'html5sortable-rails', '~> 0.9.3.1'
 
 gem 'jquery-ui-rails', '~> 7.0'
+
+#from Deanin video on ROR 7  Drag and Drop Speedrun https://www.youtube.com/watch?v=KJAHZfdO7sI
+gem 'acts_as_list', '~> 1.2', '>= 1.2.2'
