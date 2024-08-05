@@ -89,3 +89,23 @@ body {
     margin: 0 auto;
     float: auto;
 }
+
+#background
+{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-trasform: traslateX(-50%) translateY(-50%);
+  background: image-url('tired_pug.jpg') no-repeat;
+  background-size: cover;
+}
+
+.app-footer
+{
+  color: white;
+}
