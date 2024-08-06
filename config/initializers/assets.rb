@@ -17,3 +17,5 @@ Rails.application.config.assets.precompile += %w( portfolios.css ) # it seems th
 # config/initializers/assets.rb
 Rails.application.config.assets.precompile += %w(bootstrap.js popper.js)
 
+#generated from ChatGPT
+Rails.application.config.assets.precompile += %w( videos/* )
