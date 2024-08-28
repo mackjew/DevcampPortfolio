@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <%# this meta tag is necessary for configuring turbolinks to not cache on this layout. The need for this is the video_tag call we have down below. When caching is on, turbolinks seems to unmute the video player when navigating to other pages. %>
+    <meta name="turbolinks-cache-control" content="no-cache">
 
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
@@ -20,6 +23,10 @@
   <body class="d-flex h-100 text-center text-bg-dark">
     
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <div data-no-transition-cache>
+        <%= video_tag('HardDrivePhotojpeg.mp4', id:'background', autoplay: true, loop: true, muted: true, poster: 'tired_pug.jpg') %>
+      </div>
+
       <%= render("shared/application_nav") %>
 
       <%= yield %>
