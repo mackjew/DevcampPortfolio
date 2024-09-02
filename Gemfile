@@ -101,4 +101,7 @@ gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
 # managing nested forms,uses jquery
- gem 'cocoon', '~> 1.2', '>= 1.2.15'
+gem 'cocoon', '~> 1.2', '>= 1.2.15'
+
+# used for displaying notifications on screen as the user types input or other notificaitons
+gem "gritter", "1.2.0"

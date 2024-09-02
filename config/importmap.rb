@@ -16,3 +16,5 @@ pin "sortablejs" # @1.15.2
 
 pin "jquery", to: "vendor/jquery-rails/jquery.js"
 pin "cocoon", to: "vendor/cocoon/cocoon.js"
+
+pin "gritter", to: "gritter.js"
