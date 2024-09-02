@@ -2,7 +2,7 @@
   <% if blog.errors.any? %>
     <% blog.errors.full_messages.each do |error| %>
       <% extend_gritter(fade_in_speed: 1000, fade_out_speed: 1000 ) %>
-      <%= js add_gritter(error, title: "MacKenzie Portfolio", time: 6000) %>
+      <%= alertsHelper_generator(error) %>  
     <% end %>
   <% end %>
 

@@ -56,4 +56,15 @@ module ApplicationHelper
       ]
     end
 
+    def alertsHelper
+      alert = (flash[:alert] || flash[:error] || flash[:notice] )
+      if(alert)
+        return alertsHelper_generator(alert);
+      end
+    end
+
+    def alertsHelper_generator(msg)
+      js(add_gritter(msg, title: "MacKenzie Portfolio", time: 6000) )
+    end
+
 end
