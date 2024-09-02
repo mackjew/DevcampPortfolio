@@ -30,6 +30,8 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
 
     respond_to do |format|
+      # byebug
+      
       if @blog.save
         format.html { redirect_to blog_url(@blog), notice: "Blog was successfully created." }
         format.json { render :show, status: :created, location: @blog }

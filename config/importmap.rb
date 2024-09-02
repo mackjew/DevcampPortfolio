@@ -13,3 +13,6 @@ pin "html5sortable", to: "html5sortable.js", preload: true
 pin "@rails/request.js", to: "@rails--request.js.js" # @0.0.8
 pin "@stimulus-components/sortable", to: "@stimulus-components--sortable.js" # @5.0.1
 pin "sortablejs" # @1.15.2
+
+pin "jquery", to: "vendor/jquery-rails/jquery.js"
+pin "cocoon", to: "vendor/cocoon/cocoon.js"

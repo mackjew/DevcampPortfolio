@@ -95,6 +95,10 @@ gem 'jquery-ui-rails', '~> 7.0'
 #from Deanin video on ROR 7  Drag and Drop Speedrun https://www.youtube.com/watch?v=KJAHZfdO7sI
 gem 'acts_as_list', '~> 1.2', '>= 1.2.2'
 
+# required for image file upload
 gem 'carrierwave', '~> 3.0', '>= 3.0.7'
 gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+
+# managing nested forms,uses jquery
+ gem 'cocoon', '~> 1.2', '>= 1.2.15'
