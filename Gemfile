@@ -105,3 +105,5 @@ gem 'cocoon', '~> 1.2', '>= 1.2.15'
 
 # used for displaying notifications on screen as the user types input or other notificaitons
 gem "gritter", "1.2.0"
+
+ruby "3.1.2"
