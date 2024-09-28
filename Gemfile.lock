@@ -297,6 +297,7 @@ DEPENDENCIES
   acts_as_list (~> 1.2, >= 1.2.2)
   bootsnap
   bootstrap (~> 5.3.3)
+  bundler (= 2.4.12)
   carrierwave (~> 3.0, >= 3.0.7)
   cocoon (~> 1.2, >= 1.2.15)
   dartsass-sprockets
