@@ -106,4 +106,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.15'
 # used for displaying notifications on screen as the user types input or other notificaitons
 gem "gritter", "1.2.0"
 
+
+gem 'bundler', '2.4.12'
 ruby "3.1.2"
