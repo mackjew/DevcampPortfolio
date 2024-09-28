@@ -107,3 +107,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.15'
 
 # used for displaying notifications on screen as the user types input or other notificaitons
 gem "gritter", "1.2.0"
+
+#restricting ffi gem to a version lower than 1.17.0. This is because of an error with ffi : https://github.com/ffi/ffi/issues/1103
+gem "ffi", "< 1.17.0"
