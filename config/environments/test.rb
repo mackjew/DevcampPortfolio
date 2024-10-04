@@ -57,4 +57,8 @@ Rails.application.configure do
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+
+
+  # this is the configuration for the secret key that gets used by devise.
+  #config.secret_key_base = ENV("SECRET_KEY_BASE")
 end
