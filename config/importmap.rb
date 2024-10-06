@@ -15,6 +15,7 @@ pin "@stimulus-components/sortable", to: "@stimulus-components--sortable.js" # @
 pin "sortablejs" # @1.15.2
 
 pin "jquery", to: "vendor/jquery-rails/jquery.js"
+pin "jquery_ujs", to: "vendor/jquery-rails/jquery_ujs.js"
 pin "cocoon", to: "vendor/cocoon/cocoon.js"
 
 pin "gritter", to: "gritter.js"
