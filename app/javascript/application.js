@@ -1,8 +1,6 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 
 
-//= require "gritter"
-console.log("imported gritter 1");
 
 import "@hotwired/turbo-rails"
 console.log("imported @hotwired/turbo-rails");
@@ -16,9 +14,6 @@ console.log("imported jquery");
 import "cocoon"
 console.log("imported cocoon");
 
-import "gritter"
-console.log("imported gritter");
-
 import "jquery_ujs"
 console.log("imported jquery_ujs");
 
@@ -27,6 +22,9 @@ console.log("imported popperjs/core");
 
 import "bootstrap"
 console.log("imported bootstrap");
+
+import "gritter"
+console.log("imported gritter");
 
 
 var myVar = 0;
