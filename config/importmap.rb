@@ -18,4 +18,4 @@ pin "jquery", to: "vendor/jquery-rails/jquery.js"
 pin "jquery_ujs", to: "vendor/jquery-rails/jquery_ujs.js"
 pin "cocoon", to: "vendor/cocoon/cocoon.js"
 
-pin "gritter", to: "gritter.js"
+pin "gritter", to: "vendor/gritter/gritter.js"

@@ -23,9 +23,11 @@ console.log("imported popperjs/core");
 import "bootstrap"
 console.log("imported bootstrap");
 
+
+var myVar = 0;
+alert(myVar);
+
 import "gritter"
 console.log("imported gritter");
 
 
-var myVar = 0;
-alert(myVar);
