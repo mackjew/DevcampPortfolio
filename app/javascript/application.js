@@ -22,3 +22,7 @@ console.log("imported popperjs/core");
 
 import "bootstrap"
 console.log("imported bootstrap");
+
+
+var myVar = 0;
+alert(myVar);
