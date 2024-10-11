@@ -8,3 +8,5 @@
 //= link html5sortable.js
 
 //= link gritter.js
+
+//= link bootstrap.min.js
