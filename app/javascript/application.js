@@ -1,4 +1,9 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+
+
+//= require "gritter"
+console.log("imported gritter 1");
+
 import "@hotwired/turbo-rails"
 console.log("imported @hotwired/turbo-rails");
 
