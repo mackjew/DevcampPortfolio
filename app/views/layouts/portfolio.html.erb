@@ -12,7 +12,6 @@
 
     <%= stylesheet_link_tag "portfolios", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-
   </head>
 
   <body>
@@ -75,10 +74,10 @@
     <p class="alert"> <%= alert %> </p>
 
     <%= render("shared/portfolio_masthead") unless logged_in?(:site_admin) %>
-
+    
     <%= yield %>
 
-    <%= alertsHelper() %>  
+    <%= alertsHelper() %>
 
     <%= source_helper("application") %>
 

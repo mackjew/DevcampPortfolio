@@ -21,7 +21,7 @@
   </head>
 
   <body class="d-flex h-100 text-center text-bg-dark">
-    
+
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <div data-no-transition-cache>
         <%= video_tag('HardDrivePhotojpeg.mp4', id:'background', autoplay: true, loop: true, muted: true, poster: 'tired_pug.jpg') %>
@@ -33,7 +33,18 @@
 
       <%= render("shared/application_footer") %>
 
-      <%= alertsHelper() %>  
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          console.log("script print");
+          
+          // Ensure jQuery is available
+          if (typeof jQuery !== "undefined") {
+            <%= alertsHelper_nojs() %>
+          } else {
+            console.log("jQuery not loaded yet!");
+          }
+        });
+      </script>
 
       <%= source_helper("application") %>
     </div>

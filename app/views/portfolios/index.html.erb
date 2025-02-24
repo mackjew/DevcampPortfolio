@@ -2,12 +2,13 @@
 
 <div class="album py-5 bg-body-tertiary">
   <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
-    data-controller="sortable"
-    data-sortable-resource-name-value="portfolio"
-    >
+    <div class="row g-3 justify-content-end">
+      <%= render("shared/portfolio_masthead_1") if logged_in?(:site_admin) %>
+    </div>
+    
+    <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-md-3 " data-controller="sortable" data-sortable-resource-name-value="portfolio">
       <%# original link for creating portfolio records. does not belong in the main body of index anymore %>
-      <%# <%= link_to("Create New Item", new_portfolio_path) if logged_in?(:site_admin)%> 
+      <%# <%= link_to("Create New Item", new_portfolio_path) if logged_in?(:site_admin)%>  
 
       <%= render(partial: 'portfolio_item', collection: @portfolio_items )%>
     </div>

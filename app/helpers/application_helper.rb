@@ -8,7 +8,7 @@ module ApplicationHelper
             # <!-- This code is functional with rails 7 and is based on Turbo. Apparently Turbo is meant to help build effective/modern web app frontends with out writing a ton of JS or messing with SPAs. More info on Turbo here: https://turbo.hotwired.dev/handbook/introduction -->
             "<div>".html_safe() + (link_to('Register', new_user_registration_path, data: { turbo_method: :get }, class: style) ) + "</div>".html_safe() +
             " ".html_safe() +
-            "<div>".html_safe() + (link_to('Login', new_user_session_path, data: { turbo_method: :get }, class: style) ) + "</div>".html_safe()
+            "<div>".html_safe() + (link_to('Login', new_user_session_path, data: { turbo_method: :get, turbo: false }, class: style) ) + "</div>".html_safe()
         else 
             link_to("Logout", destroy_user_session_path, data: { turbo_method: :delete }, class: style )
         end
@@ -59,14 +59,25 @@ module ApplicationHelper
     end
 
     def alertsHelper
-      alert = (flash[:alert] || flash[:error] || flash[:notice] )
+      alert = (flash[:alert] || flash[:error] || flash[:notice] || notice )
       if(alert)
         return alertsHelper_generator(alert);
       end
     end
 
     def alertsHelper_generator(msg)
-      js(add_gritter(msg, title: "MacKenzie Portfolio", time: 6000) )
+      js(add_gritter(msg, title: "Notification", time: 6000) )
+    end
+
+    def alertsHelper_nojs
+      alert = (flash[:alert] || flash[:error] || flash[:notice] || notice )
+      if(alert)
+        return alertsHelper_generator_nojs(alert);
+      end
+    end
+
+    def alertsHelper_generator_nojs(msg)
+      add_gritter(msg, title: "Notification", time: 6000)
     end
 
 end

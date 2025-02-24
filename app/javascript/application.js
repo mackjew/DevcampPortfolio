@@ -6,6 +6,9 @@ console.log("imported @hotwired/turbo-rails");
 import "controllers"
 console.log("imported controllers");
 
+import pjs from "controllers/portfolios"
+console.log("imported controllers/portfolios");
+
 import "jquery"
 console.log("imported jquery");
 
@@ -23,3 +26,9 @@ console.log("imported bootstrap");
 
 import "gritter"
 console.log("imported gritter");
+
+
+window.myDebugObject = 
+{
+  pjs: pjs // this makes the imported object from "controllers/portfolios" available in console.
+}
