@@ -60,6 +60,18 @@ body {
 * Custom Styles
 */
 
+.viewable-text
+{
+  color: white; /* Text color */
+  text-shadow: 
+    -1px -1px 0 gray,  
+     1px -1px 0 gray,
+    -1px  1px 0 gray,
+     1px  1px 0 gray; /* Creates a black outline */
+  /*font-size: 48px; /* Adjust size as needed */
+  /*font-weight: bold; */
+}
+
 .card-body
 {
     color: black;
